@@ -1,0 +1,7 @@
+base   mlfarm
+author Jakub Skokan
+email  aither@havefun.cz
+date   2016-11-30
+name   Multilingual farms
+desc   Interlink a farm of multilingual wikis, one animal per language
+url    https://www.dokuwiki.org/plugin:mlfarm

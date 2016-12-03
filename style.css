@@ -1,0 +1,30 @@
+.translations {
+    float: left;
+    margin-left: -.5em;
+    margin-right: -1em;
+    margin-bottom: -1px;
+    margin-top: -1.5em;
+    overflow: hidden;
+    padding: .5em 1em 0 .5em;
+}
+
+.translations ul {
+    margin: 0;
+    padding: 0;
+    font-size: .875em;
+    border: solid #eee;
+    border-width: 1px 1px 0 1px;
+    background-color: #fff;
+    color: #999;
+    padding: .1em .35em;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom: none;
+    box-shadow: 0 0 .5em #999;
+}
+
+.translations li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 5px 0 5px;
+}
