@@ -1,4 +1,10 @@
 <?php
+/**
+ * Multilingual farms
+ *
+ * @license GPL 2 http://www.gnu.org/licenses/gpl-2.0.html
+ * @author  Jakub Skokan <jakub.skokan@vpsfree.cz>
+ */
 
 if (!defined('DOKU_INC')) die();
 
