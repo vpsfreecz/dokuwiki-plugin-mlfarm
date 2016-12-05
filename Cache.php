@@ -15,7 +15,7 @@ class Cache {
     }
 
     private function __construct() {
-        $this->path = DOKU_INC.'/data/cache/mlfarm.dat';
+        $this->path = DOKU_INC.'/data/meta/mlfarm.map.dat';
         $this->cache = null;
     }
 
