@@ -30,7 +30,13 @@ class helper_plugin_mlfarm extends DokuWiki_Plugin {
         if (!$id)
             $id = $INFO['id'];
 
-        $gid = p_get_metadata($id, 'identifier');
+        $gid = null;
+
+        if ($this->getConf('master'))
+            $gid = $id;
+        else
+            $gid = p_get_metadata($id, 'identifier');
+
         $translations = \dokuwiki\plugin\mlfarm\Cache::getInstance()->get($gid);
 
         if (!$translations)
