@@ -43,6 +43,7 @@ class Cache {
             $cache[$id] = array();
 
         $cache[$id][$lang] = $opts;
+        $this->cache = $cache;
 
         fwrite($fd, serialize($cache));
         fflush($fd);
