@@ -23,7 +23,7 @@ class action_plugin_mlfarm extends DokuWiki_Action_Plugin {
         if (!$ID || $ACT != 'show' || !$this->getConf('master'))
             return;
 
-        $cache = \dokuwiki\plugin\mlfarm\Cache::getInstance();
+        $cache = \dokuwiki\plugin\mlfarm\Cache::getInstance($this->getConf('cache-file'));
         $translations = $cache->get($ID);
 
         if ($translations && isset($translations[$conf['lang']]))
@@ -52,7 +52,7 @@ class action_plugin_mlfarm extends DokuWiki_Action_Plugin {
 
         $link = wl($ID);
 
-        \dokuwiki\plugin\mlfarm\Cache::getInstance()->set($gid, $conf['lang'], array(
+        \dokuwiki\plugin\mlfarm\Cache::getInstance($this->getConf('cache-file'))->set($gid, $conf['lang'], array(
             'base_url' => DOKU_URL,
             'local_id' => $ID,
             'link' => $link,

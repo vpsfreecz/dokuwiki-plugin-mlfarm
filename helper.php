@@ -37,7 +37,7 @@ class helper_plugin_mlfarm extends DokuWiki_Plugin {
         else
             $gid = p_get_metadata($id, 'identifier');
 
-        $translations = \dokuwiki\plugin\mlfarm\Cache::getInstance()->get($gid);
+        $translations = \dokuwiki\plugin\mlfarm\Cache::getInstance($this->getConf('cache-file'))->get($gid);
 
         if (!$translations)
             return '';

@@ -13,15 +13,18 @@ if (!defined('DOKU_INC')) die();
 class Cache {
     private static $instance = null;
 
-    public static function getInstance() {
+    public static function getInstance($cacheFile) {
         if (!$instance)
-            $instance = new Cache();
+            $instance = new Cache($cacheFile);
 
         return $instance;
     }
 
-    private function __construct() {
-        $this->path = DOKU_INC.'/data/meta/mlfarm.map.dat';
+    private function __construct($cacheFile) {
+        if ($cacheFile)
+            $this->path = $cacheFile;
+        else
+            $this->path = DOKU_INC.'/data/meta/mlfarm.map.dat';
         $this->cache = null;
     }
 
